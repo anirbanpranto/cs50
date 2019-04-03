@@ -74,7 +74,7 @@ int main()
     long w= pow(10,size-1);
     long master = (number/z);
     long visa = (number/w)%10;
-    if (size == 16){
+    if (size == 16 || size==13){
         if (master != 51 && master != 52 && master != 53 && master != 54 && master != 55 && visa !=4){
             printf("INVALID\n");
         }
@@ -86,14 +86,9 @@ int main()
         }
 
     }
-    //validates a 13 digit visa card number
-    if(size==13 && visa==4){
-        printf("VISA\n");
-    }
-    else{
+    if(size<13){
         printf("INVALID\n");
     }
-    
     
 }
 
